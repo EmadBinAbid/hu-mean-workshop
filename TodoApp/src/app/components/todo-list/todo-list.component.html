@@ -1,12 +1,19 @@
 <div class="todo-list">
-  <div class="todo-list-item" *ngFor="let todoItem of list; let i=index">
+  
+  <button class=" buttonsRight" type="button" (click)="markAllDone()">Mark All as Done</button>
+  <button class=" buttonsRight" type="button" (click)="deleteAll()">Remove All</button>
+
+  <br><br><br><br>
+
+  <div class="todo-list-item" *ngFor="let todoItem of list; let i=index" [ngStyle]="setStyles(i)">
     <div class="item">
         {{i+1}}.
         {{todoItem.todo}}
     </div>
     
-    <div class="buttons">
-        <button type="button" (click)="indexOfListItem(i)">{{removeButtonText}}</button>
+    <div>
+        <button class="buttons" type="button" (click)="indexOfListItem(i)">{{removeButtonText}}</button>
+        <button class="buttons" type="button" (click)="markAsDone(i)">Mark as Done</button>
     </div>
     <br><br>
   </div>

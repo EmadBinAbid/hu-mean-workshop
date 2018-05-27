@@ -39,5 +39,9 @@ export class TodoAppComponent implements OnInit {
     console.log("todoItem");
     this.todoList.splice(todoItem, 1);
   }
-
+  deleteAllItems(value)
+  {
+    this.todoList = [];
+    console.log("Hi");
+  }
 }

@@ -10,7 +10,7 @@ export class TodoInputComponent implements OnInit {
   inputFieldPlaceHolder = "Enter your Todo item here";
   inputButtonText = "Add";
   inputText = "";
-  
+
   @Output() itemAdded = new EventEmitter<any>();
 
   constructor() { }
@@ -20,8 +20,11 @@ export class TodoInputComponent implements OnInit {
 
   addItem()
   {
-    this.itemAdded.emit(this.inputText);
-    this.inputText = "";
+    if (this.inputText.length > 0)
+    {
+      this.itemAdded.emit(this.inputText);
+      this.inputText = "";
+    }
   }
 
 }

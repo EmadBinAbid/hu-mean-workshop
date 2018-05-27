@@ -8,6 +8,6 @@
   </div>
 
   <ta-todo-input (itemAdded)="addNewItem($event)" ></ta-todo-input>
-  <ta-todo-list (itemDeleted)="deleteItem($event)" [list]="todoList"></ta-todo-list>
+  <ta-todo-list (itemDeleted)="deleteItem($event)" (allDeleted)="deleteAllItems($event)" [list]="todoList"></ta-todo-list>
 
 </div>

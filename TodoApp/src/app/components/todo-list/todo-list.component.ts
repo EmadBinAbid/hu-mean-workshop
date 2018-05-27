@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { forEach } from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'ta-todo-list',
@@ -12,6 +13,7 @@ export class TodoListComponent implements OnInit {
   @Input() list = [];
 
   @Output() itemDeleted = new EventEmitter<any>();
+  @Output() allDeleted = new EventEmitter<any>();
 
   constructor() { }
 
@@ -22,5 +24,39 @@ export class TodoListComponent implements OnInit {
   {
     this.itemDeleted.emit(index);
     console.log(index + " Emitted.");
+  }
+
+  deleteAll()
+  {
+    this.allDeleted.emit(true);
+  }
+
+  markAsDone(index)
+  {
+    
+    this.list[index].done = true;
+    
+    let markStyle = {
+      "color": "green"
+
+    };
+
+    console.log("Marked");
+  }
+
+  setStyles(i)
+  {
+    let styles = {
+      "color": this.list[i].done ? "#00b300" : "black"
+    }
+    return styles;
+  }
+
+  markAllDone()
+  {
+    for(let i=0; i<this.list.length; i++)
+    {
+      this.markAsDone(i);
+    }
   }
 }

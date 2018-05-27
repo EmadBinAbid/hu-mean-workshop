@@ -11,9 +11,25 @@
 
 .buttons
 {
+    background-color: white;
     text-align: center;
     display: inline-block;
     font-size: 12px;
-    padding: 0px; 
+    padding: 5px; 
     margin: auto 20px;
+
+    
+}
+
+.buttonsRight
+{
+    background-color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px; 
+    margin: auto 20px auto 500px;
+    float: right;
+    
+    
 }
