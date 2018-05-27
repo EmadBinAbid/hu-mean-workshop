@@ -47,7 +47,7 @@ export class TodoListComponent implements OnInit {
   setStyles(i)
   {
     let styles = {
-      "color": this.list[i].done ? "#00b300" : "black"
+      "color": this.list[i].done ? "#00b300" : "white"
     }
     return styles;
   }
