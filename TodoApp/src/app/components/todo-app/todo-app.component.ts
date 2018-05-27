@@ -34,4 +34,10 @@ export class TodoAppComponent implements OnInit {
     });
   }
 
+  deleteItem(todoItem)
+  {
+    console.log("todoItem");
+    this.todoList.splice(todoItem, 1);
+  }
+
 }
