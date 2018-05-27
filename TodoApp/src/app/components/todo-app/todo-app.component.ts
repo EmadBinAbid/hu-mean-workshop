@@ -9,6 +9,18 @@ export class TodoAppComponent implements OnInit {
 
   title = "Todo App";
   mainText = "Just focus on your work, and let this App remember the jobs for you.";
+
+  todoList = [
+    {
+      todo: "Learn Angular",
+      done: false
+    },
+    {
+      todo: "Learn Node.js",
+      done: false
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {

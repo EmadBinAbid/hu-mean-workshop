@@ -9,6 +9,7 @@ export class TodoInputComponent implements OnInit {
 
   inputFieldPlaceHolder = "Enter your Todo item here";
   inputButtonText = "Add";
+  inputText = "Some text";
   
   constructor() { }
 

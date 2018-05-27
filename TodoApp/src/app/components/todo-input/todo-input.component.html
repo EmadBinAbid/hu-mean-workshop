@@ -1,4 +1,5 @@
 <div class="todo-input">
-  <input [placeholder]="inputFieldPlaceHolder" size="40">
-  <button type="button" class="buttons">{{inputButtonText}}</button>
+  <input [placeholder]="inputFieldPlaceHolder" [(ngModel)]="inputText">
+  <button type="button" class="buttons">{{inputButtonText}}</button> <br>
+  {{inputText}}
 </div>

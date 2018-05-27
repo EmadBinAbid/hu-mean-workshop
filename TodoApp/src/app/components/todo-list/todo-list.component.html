@@ -1,3 +1,5 @@
-<p>
-  todo-list works!
-</p>
+<div class="todo-list">
+  <div class="todo-list-item" *ngFor="let todoItem of list">
+    {{todoItem.todo}}
+  </div>
+</div>
