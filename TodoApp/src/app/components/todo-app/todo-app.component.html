@@ -7,7 +7,7 @@
     {{mainText}}
   </div>
 
-  <ta-todo-input></ta-todo-input>
+  <ta-todo-input (itemAdded)="addNewItem($event)"></ta-todo-input>
   <ta-todo-list [list]="todoList"></ta-todo-list>
 
 </div>
