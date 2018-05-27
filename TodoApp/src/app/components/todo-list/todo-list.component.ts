@@ -7,6 +7,8 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
+  removeButtonText="Remove";
+
   @Input() list = [];
 
   @Output() itemDeleted = new EventEmitter<any>();

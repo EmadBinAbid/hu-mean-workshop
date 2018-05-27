@@ -1,7 +1,13 @@
 <div class="todo-list">
   <div class="todo-list-item" *ngFor="let todoItem of list; let i=index">
-    {{i+1}}.
-    {{todoItem.todo}}
-    <button (click)="indexOfListItem(i)">Remove Item</button>
+    <div class="item">
+        {{i+1}}.
+        {{todoItem.todo}}
+    </div>
+    
+    <div class="buttons">
+        <button type="button" (click)="indexOfListItem(i)">{{removeButtonText}}</button>
+    </div>
+    <br><br>
   </div>
 </div>
