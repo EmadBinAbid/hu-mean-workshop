@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgentsAddComponent implements OnInit {
 
+  inputFirstName = '';
+  inputLastName = '';
+  inputStreet = '';
+  inputCity = '';
+  inputState = '';
+  inputPostCode = '';
+  inputEmail = '';
+  
   constructor() { }
 
   ngOnInit() {
