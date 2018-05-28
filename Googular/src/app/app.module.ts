@@ -11,11 +11,16 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { AgentsComponent } from './components/agents/agents.component';
+import { AgentsAddComponent } from './components/agents/components/agents-add/agents-add.component';
+import { AgentsListComponent } from './components/agents/components/agents-list/agents-list.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'welcome', component: WelcomeComponent},
+  {path: 'agents/agents-add', component: AgentsAddComponent},
+  {path: 'agents/agents-list', component: AgentsListComponent},
+  {path: 'agents', component: AgentsComponent},
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
   {path: '**', component: PageNotFoundComponent}
@@ -30,7 +35,10 @@ const appRoutes: Routes = [
     WelcomeComponent,
     PageNotFoundComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    AgentsComponent,
+    AgentsAddComponent,
+    AgentsListComponent
   ],
   imports: [
     BrowserModule,
