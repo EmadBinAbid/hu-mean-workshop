@@ -31,7 +31,13 @@ export class AgentsAddComponent implements OnInit {
       location: {street: this.inputStreet, city: this.inputCity, state: this.inputState, postcode: this.inputPostCode},
       accounts: {email: this.inputEmail}  
     };
+
+    //Sending request to AgentsService
     this._agentsService.setAgentsList(this.agentData);
+
+    //Clearing input fields.
+    this.inputFirstName = this.inputLastName = this.inputStreet = this.inputCity = this.inputState = 
+    this.inputPostCode = this.inputEmail = "";
   }
 
 }

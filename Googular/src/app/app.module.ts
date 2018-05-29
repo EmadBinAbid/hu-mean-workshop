@@ -19,6 +19,7 @@ import { AgentsComponent } from './components/agents/agents.component';
 import { AgentsAddComponent } from './components/agents-add/agents-add.component';
 import { AgentsListComponent } from './components/agents-list/agents-list.component';
 import { AgentsService } from './services/agents.service';
+import { AgentDetailsComponent } from './components/agent-details/agent-details.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -28,7 +29,14 @@ const appRoutes: Routes = [
     component: AgentsComponent,
     children: [
       {path: 'agents-add', component: AgentsAddComponent},
-      {path: 'agents-list', component: AgentsListComponent}
+      {
+        path: 'agents-list', 
+        component: AgentsListComponent,
+        children: [
+          {path: 'agent-details/:id',
+          component: AgentDetailsComponent}
+        ]
+      }
     ]
   },
   {path: 'about', component: AboutComponent},
@@ -48,12 +56,13 @@ const appRoutes: Routes = [
     ContactComponent,
     AgentsComponent,
     AgentsAddComponent,
-    AgentsListComponent
+    AgentsListComponent,
+    AgentDetailsComponent
     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true }),
+    RouterModule.forRoot(appRoutes/*, { enableTracing: true }*/),
     FormsModule,
     HttpClientModule
   ],

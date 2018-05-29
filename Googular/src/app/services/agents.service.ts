@@ -8,6 +8,7 @@ import { GetAgentsResults } from '../interfaces/get-agents-results';
 export class AgentsService {
 
   agentsList = [];
+  //currentSelectedAgent = {};
 
   constructor(private _http: HttpClient) {
     this._http.get('https://randomuser.me/api/?results=50&seed=hu')
@@ -25,5 +26,21 @@ export class AgentsService {
   setAgentsList(data)
   {
     this.agentsList.push(data);
+  }
+
+  /*sendCurrentAgentDetails(agent)
+  {
+    this.currentSelectedAgent = agent;
+  }*/
+
+  receiveCurrentAgentDetails(id)
+  {
+    for(var i=0; i<this.agentsList.length; i++)
+    {
+      if(this.agentsList[i].id === id)
+      {
+        return this.agentsList[i];
+      }
+    }
   }
 }

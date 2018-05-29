@@ -9,6 +9,7 @@ import { AgentsService } from '../../services/agents.service';
 export class AgentsListComponent implements OnInit {
 
   agentsList = [];
+  
 
   constructor(private _agentsService: AgentsService) { 
     
@@ -16,6 +17,14 @@ export class AgentsListComponent implements OnInit {
 
   ngOnInit() {
     this.agentsList = this._agentsService.getAgentsList();
+
+    for(var i=0; i<this.agentsList.length; i++)
+    {
+      delete this.agentsList[i].id;
+      this.agentsList[i].id = i;
+    }
+
+    
   }
 
 }
