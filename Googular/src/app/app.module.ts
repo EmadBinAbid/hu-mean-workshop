@@ -20,6 +20,7 @@ import { AgentsAddComponent } from './components/agents-add/agents-add.component
 import { AgentsListComponent } from './components/agents-list/agents-list.component';
 import { AgentsService } from './services/agents.service';
 import { AgentDetailsComponent } from './components/agent-details/agent-details.component';
+import { TrackAgentsComponent } from './components/track-agents/track-agents.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -57,8 +58,9 @@ const appRoutes: Routes = [
     AgentsComponent,
     AgentsAddComponent,
     AgentsListComponent,
-    AgentDetailsComponent
-    ],
+    AgentDetailsComponent,
+    TrackAgentsComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

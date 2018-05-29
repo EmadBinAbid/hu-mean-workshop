@@ -16,12 +16,14 @@
 .buttons-div
 {
     display: inline-block;
-    margin: 10px;
+    margin: 10px 100px;
     text-align: center;
 }
 
 .buttons
 {
-    width: 200px;
-    height: 100px;
+    width: 350px;
+    height: 80px;
+    font-family: monospace;
+    font-size: 30px;
 }

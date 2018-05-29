@@ -1,6 +1,20 @@
 .main-div
 {
-    margin: -72% 0px 0px 800px;
+    font-family: monospace;
+    margin: -71% 0px 0px 600px;
+    padding: 10px;
     position: absolute;
     background-color: lightcoral;
+}
+
+.info-div
+{
+    width: 400px;
+}
+
+.data-label
+{
+    float: right;
+    
+    margin: 0px;
 }

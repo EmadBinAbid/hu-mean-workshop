@@ -1,8 +1,8 @@
 <div class="main-div">
-    <div>
-      Agents List:
+    <div class="list-div">
+      <h2>Agents List:</h2>
       <div *ngFor="let agent of agentsList; let i=index" routerLink="agent-details/{{i}}">
-        {{i+1}} {{agent.id}} {{agent.name.first}} {{agent.name.last}}
+        {{i+1}}. {{agent.name.first}} {{agent.name.last}}
       </div>
     </div>
 </div>
