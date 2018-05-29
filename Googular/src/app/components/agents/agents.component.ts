@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+/*import { ActivatedRoute, Router } from '@angular/router';*/
 
 @Component({
   selector: 'ga-agents',
@@ -8,7 +8,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AgentsComponent implements OnInit {
  
-  agentsList = [];
 
   constructor(/*private route: ActivatedRoute, private router: Router*/)
   {

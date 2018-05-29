@@ -8,6 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { FormsModule } from '@angular/forms';
 
+import { HttpClientModule } from  '@angular/common/http';
+
 import { HomeComponent } from './components/home/home.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
@@ -16,6 +18,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { AgentsComponent } from './components/agents/agents.component';
 import { AgentsAddComponent } from './components/agents-add/agents-add.component';
 import { AgentsListComponent } from './components/agents-list/agents-list.component';
+import { AgentsService } from './services/agents.service';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -51,9 +54,10 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes, { enableTracing: true }),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AgentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

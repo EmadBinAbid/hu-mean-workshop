@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AgentsService } from '../../services/agents.service';
 
 @Component({
   selector: 'ga-agents-add',
@@ -14,10 +15,19 @@ export class AgentsAddComponent implements OnInit {
   inputState = '';
   inputPostCode = '';
   inputEmail = '';
+
+  agentData = {
+    name:{first: "Amir", last: "Liaquat"}
+    };
   
-  constructor() { }
+  constructor(private _agentsService: AgentsService) { }
 
   ngOnInit() {
+  }
+
+  addAgent(data)
+  {
+    this._agentsService.setAgentsList(this.agentData);
   }
 
 }
