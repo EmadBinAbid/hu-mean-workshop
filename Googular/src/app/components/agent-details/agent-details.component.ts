@@ -32,4 +32,9 @@ export class AgentDetailsComponent implements OnInit {
     console.log(this.currentAgent);
   }
 
+  trackAgent()
+  {
+    
+  }
+
 }
