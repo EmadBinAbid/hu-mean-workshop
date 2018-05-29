@@ -6,7 +6,7 @@
         <label>Name:</label>
         <div class="form-element">
           <label>First:</label>
-          <input type="text" placeholder="Enter firstname" [(ngModel)]="inputFirstName">
+          <input type="text" placeholder="Enter firstname" [(ngModel)]="inputFirstName" name="first">
         </div>
       </div>
           
@@ -14,27 +14,27 @@
         <label>Location:</label>
         <div class="form-element">
             <label>Last:</label>
-            <input type="text" placeholder="Enter lastname" [(ngModel)]="inputLastName">
+            <input type="text" placeholder="Enter lastname" [(ngModel)]="inputLastName" name="last">
         </div>
 
         <div class="form-element">
             <label>Street:</label>
-            <input type="text" placeholder="Enter street address" [(ngModel)]="inputStreet">
+            <input type="text" placeholder="Enter street address" [(ngModel)]="inputStreet" name="street">
         </div>
 
         <div class="form-element">
             <label>City:</label>
-            <input type="text" placeholder="Enter city" [(ngModel)]="inputCity">
+            <input type="text" placeholder="Enter city" [(ngModel)]="inputCity" name="city">
         </div>
 
         <div class="form-element">
             <label>State</label>
-            <input type="text" placeholder="Enter state" [(ngModel)]="inputState">
+            <input type="text" placeholder="Enter state" [(ngModel)]="inputState" name="state">
         </div>
 
         <div class="form-element">
             <label>Postcode:</label>
-            <input type="text" placeholder="Enter city" [(ngModel)]="inputPostCode">
+            <input type="text" placeholder="Enter city" [(ngModel)]="inputPostCode" name="postcode">
         </div>
       </div>
 
@@ -42,12 +42,13 @@
         <label>Accounts:</label>
         <div class="form-element">
             <label>Email:</label>
-            <input type="text" placeholder="Enter email" [(ngModel)]="inputEmail">
+            <input type="text" placeholder="Enter email" [(ngModel)]="inputEmail" name="email">
+            {{inputEmail}}
         </div>
       </div>
      
       <div>
-        <button (click)="addAgent(data)" class="buttons" type="button">Add</button>
+        <button (click)="addAgent()" class="buttons" type="button">Add</button>
       </div>
 
     </form>

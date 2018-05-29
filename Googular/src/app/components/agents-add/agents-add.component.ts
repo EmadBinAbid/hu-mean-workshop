@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AgentsService } from '../../services/agents.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'ga-agents-add',
@@ -16,17 +17,20 @@ export class AgentsAddComponent implements OnInit {
   inputPostCode = '';
   inputEmail = '';
 
-  agentData = {
-    name:{first: "Amir", last: "Liaquat"}
-    };
+  agentData = {};
   
   constructor(private _agentsService: AgentsService) { }
 
   ngOnInit() {
   }
 
-  addAgent(data)
+  addAgent()
   {
+    this.agentData = {
+      name: {first: this.inputFirstName, last: this.inputLastName},
+      location: {street: this.inputStreet, city: this.inputCity, state: this.inputState, postcode: this.inputPostCode},
+      accounts: {email: this.inputEmail}  
+    };
     this._agentsService.setAgentsList(this.agentData);
   }
 

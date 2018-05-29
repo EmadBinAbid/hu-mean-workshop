@@ -10,7 +10,9 @@ export class AgentsListComponent implements OnInit {
 
   agentsList = [];
 
-  constructor(private _agentsService: AgentsService) { }
+  constructor(private _agentsService: AgentsService) { 
+    
+  }
 
   ngOnInit() {
     this.agentsList = this._agentsService.getAgentsList();
