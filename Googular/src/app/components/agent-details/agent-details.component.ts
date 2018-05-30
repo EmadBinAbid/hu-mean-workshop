@@ -9,14 +9,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AgentDetailsComponent implements OnInit {
 
-  currentAgent= {};
+  currentAgent= {
+    id: null,
+    name:{first: "", last: ""},
+    location: {street: "", city: "", state: "", postcode:""},
+    email: ""
+  };
   currentAgentId;
 
   constructor(private _agentsService: AgentsService, private route: ActivatedRoute) { }
 
   ngOnInit() {
 
-    
 
     
   }
@@ -25,7 +29,6 @@ export class AgentDetailsComponent implements OnInit {
   {
     let id = this.route.snapshot.params['id'];
     this.currentAgentId = id;
-
     console.log(typeof this.currentAgentId);
 
     this.currentAgent = this._agentsService.receiveCurrentAgentDetails(parseInt(this.currentAgentId));
