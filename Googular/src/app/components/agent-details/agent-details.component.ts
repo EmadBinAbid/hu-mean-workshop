@@ -33,6 +33,7 @@ export class AgentDetailsComponent implements OnInit {
 
     this.currentAgent = this._agentsService.receiveCurrentAgentDetails(parseInt(this.currentAgentId));
     console.log(this.currentAgent);
+    console.log(this.currentAgentId);
   }
 
   trackAgent()

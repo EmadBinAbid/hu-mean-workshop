@@ -11,16 +11,18 @@ export class AgentsService {
   //currentSelectedAgent = {};
 
   constructor(private _http: HttpClient) {
-    this._http.get('https://randomuser.me/api/?results=50&seed=hu')
-    .subscribe((response: GetAgentsResults) => 
-    {
-      this.agentsList = response.results;
-    }); 
+     this._http.get('https://randomuser.me/api/?results=50&seed=hu')
+     .subscribe((response: GetAgentsResults) => 
+     {
+       this.agentsList = response.results;
+     }); 
   }
 
   getAgentsList()
   {
     return this.agentsList;
+    //return this._http.get('https://randomuser.me/api/?results=50&seed=hu')
+    
   }
 
   setAgentsList(data)
