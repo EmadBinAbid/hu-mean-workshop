@@ -11,8 +11,8 @@
     <label>Post Code:</label> <label class="data-label">{{currentAgent.location.postcode}}</label><br>
     <label>Email:</label> <label class="data-label">{{currentAgent.email}}</label><br>
 
-    <button type="button" (click)="trackAgent()" class="buttons">Track Agent</button>
+    <button type="button" routerLink="track-agents" (click)="trackAgent()" class="buttons">Track Agent</button>
   </div>
     
 </div>
-  
+<router-outlet></router-outlet>

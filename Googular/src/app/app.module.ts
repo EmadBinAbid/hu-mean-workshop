@@ -35,7 +35,8 @@ const appRoutes: Routes = [
         component: AgentsListComponent,
         children: [
           {path: 'agent-details/:id',
-          component: AgentDetailsComponent}
+          component: AgentDetailsComponent,
+        children: [{path: 'track-agents', component: TrackAgentsComponent}]}
         ]
       }
     ]
