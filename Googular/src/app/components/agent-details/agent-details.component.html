@@ -1,7 +1,7 @@
 <div class="main-div">
   <div class="info-div">
-    <div class="buttons">
-      <button type="button" (click)="viewDetails()">View Details</button>
+    <div>
+      <button type="button" (click)="viewDetails()" class="buttons">View Details</button>
     </div>
     <label>Agent ID:</label> <label class="data-label">{{currentAgent.id}}</label><br>
     <label>Agent Name:</label> <label class="data-label">{{currentAgent.name.first}} {{currentAgent.name.last}}</label><br>
@@ -11,7 +11,7 @@
     <label>Post Code:</label> <label class="data-label">{{currentAgent.location.postcode}}</label><br>
     <label>Email:</label> <label class="data-label">{{currentAgent.email}}</label><br>
 
-    <button type="button" (click)="trackAgent()">Track Agent:</button>
+    <button type="button" (click)="trackAgent()" class="buttons">Track Agent</button>
   </div>
     
 </div>
