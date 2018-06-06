@@ -35,10 +35,28 @@ exports.deleteTodo = function(id, callback)
 exports.updateTodo = function(id, updatedTodo, options, callback)
 {
     var query = { _id: id };
-    var update = {
-        name: updatedTodo.name,
-        description: updatedTodo.description
-    };
+    var update;
+    
+    if(updatedTodo.name && updatedTodo.description)
+    {
+        update = {
+            name: updatedTodo.name,
+            description: updatedTodo.description
+        };
+    }
+    else if(updatedTodo.name && !updatedTodo.description)
+    {
+        update = {
+            name: updatedTodo.name
+        };
+    }
+    else if(!updatedTodo.name && updatedTodo.description)
+    {
+        update = {
+            description: updatedTodo.description
+        };
+    }
+
     Todo.findOneAndUpdate(query, update, options, callback);
 }
 
